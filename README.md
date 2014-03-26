@@ -3,7 +3,7 @@ Mozillians on Twitter
 
 ####Basic functionality
 
-*As a user, I can sign in with Persona so that the app knows I am a Mozillian [backend]
+* As a user, I can sign in with Persona so that the app knows I am a Mozillian [backend]
 
 * As a user, I can give the app permission to edit my Twitter lists [backend]
 

@@ -11,6 +11,17 @@ var users = require('./routes/user');
 
 var app = express();
 
+app.use(express.json())
+  .use(express.urlencoded())
+  .use(express.cookieParser())
+  .use(express.session({
+    secret: "mozillapersona"
+  }));
+
+require("express-persona")(app, {
+  audience: "http://localhost:3000" // Must match your browser's address bar
+});
+
 // view engine setup
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));

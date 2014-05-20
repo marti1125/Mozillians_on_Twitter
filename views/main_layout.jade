@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css')
+    link(rel='stylesheet', href='/stylesheets/persona-buttons.css')    
+
+  body
+    div.row
+      div.small-12.columns
+        a#tabzilla(href='/en-US/',data-infobar='translation') mozilla
+    
+    block content
+
+    script(src='//mozorg.cdn.mozilla.net/tabzilla/tabzilla.js')    
+    script(src='https://login.persona.org/include.js')
+    script(src='javascripts/foundation.min.js')     	

@@ -1,0 +1,18 @@
+body {
+	background-image: url("../images/grain.png"), -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #424F5A),
+		color-stop(1, #6A7B86)
+	);
+	background-image: url("../images/grain.png"), -o-linear-gradient(bottom, #424F5A 0%, #6A7B86 100%);
+	background-image: url("../images/grain.png"), -moz-linear-gradient(bottom, #424F5A 0%, #6A7B86 100%);
+	background-image: url("../images/grain.png"), -webkit-linear-gradient(bottom, #424F5A 0%, #6A7B86 100%);
+	background-image: url("../images/grain.png"), -ms-linear-gradient(bottom, #424F5A 0%, #6A7B86 100%);
+	background-image: url("../images/grain.png"), linear-gradient(to bottom, #424F5A 0%, #6A7B86 100%);
+}
+.mainTitle {
+	color: white;
+	font-size: 3.0rem;
+}

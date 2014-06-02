@@ -1,3 +1,7 @@
+@font-face {
+  font-family: OpenSansRegular;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
 body {
 	background-image: url("../images/grain.png"), -webkit-gradient(
 		linear,
@@ -15,4 +19,5 @@ body {
 .mainTitle {
 	color: white;
 	font-size: 3.0rem;
+  font-family: OpenSansRegular;
 }

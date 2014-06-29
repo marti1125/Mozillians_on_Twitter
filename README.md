@@ -8,7 +8,7 @@ Requirements:
 * Mozillians Api
 * Twitter Api
 * ExpressJS
-* MongoDB or another database
+* Rest Client
 
 ![main](https://raw.github.com/marti1125/Mozillians_on_Twitter/master/main.png)
 

@@ -6,6 +6,29 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Rest Client
+var Client = require('node-rest-client').Client;
+client = new Client();
+
+var twitterKey = require('./keys/twitter');
+var consumer_key = twitterKey.consumer_key;
+var consumer_secret = twitterKey.consumer_secret;
+var access_token = twitterKey.access_token;
+var access_token_secret = twitterKey.access_token_secret;
+
+var Twit = require('twit');
+
+var twitter = new Twit({
+  consumer_key: consumer_key,
+  consumer_secret: consumer_secret,
+  access_token: access_token,
+  access_token_secret: access_token_secret
+});
+
+var mozilliansKey = require('./keys/mozillians');
+var app_name = mozilliansKey.app_name;
+var api_key = mozilliansKey.app_key;
+
 //var routes = require('./routes');
 var dashboard = require('./routes/dashboard');
 var security = require('./routes/security');
@@ -38,6 +61,18 @@ app.use(app.router);
 
 app.get('/', dashboard.main);
 app.get('/login', security.login);
+
+// registering remote methods
+client.registerMethod("jsonGetInfAboutUserByEmail",
+"https://mozillians.org/api/v1/users/?app_name="+app_name+"&app_key="+app_key+"&email=marti1125@gmail.com
+", "GET");
+
+client.methods.jsonGetInfAboutUserByEmail(function(data,response){
+    // parsed response body as js object
+    console.log(data);
+    // raw response
+    console.log(response);
+});
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

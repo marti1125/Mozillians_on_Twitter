@@ -14,7 +14,7 @@ Requirements:
 
 1. As a user, I can sign in with Persona so that the app knows I am a Mozillian [backend]
 
-2. Implement [Mozillian API](http://mozillians.readthedocs.org/en/latest/api.html), this integration is for verify login, with email of user
+2. Implement [Mozillian API](http://mozillians.readthedocs.org/en/latest/api/api.html), this integration is for verify login, with email of user
 
 ![main](https://raw.github.com/marti1125/Mozillians_on_Twitter/master/lists.png)
 

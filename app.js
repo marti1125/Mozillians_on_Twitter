@@ -26,6 +26,7 @@ var twitter = new Twit({
 });
 
 var mozilliansKey = require('./keys/mozillians');
+var url_server = mozilliansKey.url_server;
 var app_name = mozilliansKey.app_name;
 var api_key = mozilliansKey.app_key;
 
@@ -64,8 +65,7 @@ app.get('/login', security.login);
 
 // registering remote methods
 client.registerMethod("jsonGetInfAboutUserByEmail",
-"https://mozillians.org/api/v1/users/?app_name="+app_name+"&app_key="+app_key+"&email=marti1125@gmail.com
-", "GET");
+url_server+"/api/v1/users/?app_name="+app_name+"&app_key="+api_key+"&email=marti1125@gmail.com", "GET");
 
 client.methods.jsonGetInfAboutUserByEmail(function(data,response){
     // parsed response body as js object

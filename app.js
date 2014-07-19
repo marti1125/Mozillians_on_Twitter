@@ -18,12 +18,12 @@ var access_token_secret = twitterKey.access_token_secret;
 
 var Twit = require('twit');
 
-var twitter = new Twit({
+/*var twitter = new Twit({
   consumer_key: consumer_key,
   consumer_secret: consumer_secret,
   access_token: access_token,
   access_token_secret: access_token_secret
-});
+});*/
 
 var mozilliansKey = require('./keys/mozillians');
 var url_server = mozilliansKey.url_server;
@@ -65,7 +65,7 @@ app.get('/login', security.login);
 
 // registering remote methods
 client.registerMethod("jsonGetInfAboutUserByEmail",
-url_server+"/api/v1/users/?app_name="+app_name+"&app_key="+api_key+"&email=marti1125@gmail.com", "GET");
+url_server+"/api/v1/users/?app_name="+app_name+"&app_key="+api_key+"&email=willy@mozilla.pe", "GET");
 
 client.methods.jsonGetInfAboutUserByEmail(function(data,response){
     // parsed response body as js object

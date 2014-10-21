@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="/../javascripts/main.js"></script>
+</head>
+<body>
+	<div class="page-data">
+		<form method="post" action="/users/add">
+			<table cellpadding="11">
+				<tr>
+					<td class="label">Email</td><td>: <input type="text" name="email" required></td>
+				</tr>			
+				<tr>
+					<td class="label">Twitter</td><td>: <input type="text" name="twitter_account" required></td>
+				</tr>			
+				<tr>
+					<td class="label"></td>
+					<td>
+					&nbsp; <input type="submit" name="submit" value="Save">
+					<input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
